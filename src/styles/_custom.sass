@@ -2,13 +2,18 @@
   &-1
     animation: float1 3.5s ease-in-out infinite alternate
     position: absolute
-    top: 20%
-    right: 10%
+    top: 36%
+    right: 60%
   &-2
     animation: float1 2.8s ease-in-out infinite alternate
     position: absolute
-    top: 51%
-    right: 30%
+    top: 72%
+    right: 60%
+  &-3
+    animation: float1 2.8s ease-in-out infinite alternate
+    position: absolute
+    top: 36%
+    right: 0
 
 
 @keyframes float1
@@ -18,9 +23,14 @@
   100%
     transform: translateY(0px)
   
-  
+.banner-interno__fondo
+  background-image: url("../assets/curso/portada/fondo-banner-interno.png") !important
 .banner-principal .tarjeta
   background-position: left 50% !important
+  @media screen and (max-width: $bp-max-sm)
+    background-image: url("../assets/curso/portada/fondo-banner-principal-2.png") !important 
+  @media screen and (max-width: $bp-max-xs)
+    background-image: url("../assets/curso/portada/fondo-banner-principal-3.png") !important
 
 .banner-principal__row .banner-principal__img
   width: 400px !important  
@@ -30,4 +40,87 @@
 
 figcaption
   font-weight: normal
- 
+
+.bg_img
+  position: relative
+  p, figure, .tarjeta, h2, .row, .bg-color-5
+    position: relative
+  &::before
+    content: ''
+    position: absolute
+    margin: 0
+    top: 0
+    left: -48px
+    width: calc(100% + 96px)
+    height: 75%
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(252,249,232,1) 50%, rgba(255,255,255,1) 100%);
+.bg-color
+  background-color: #E8EAFD
+  &-1
+    background-color: #fff
+    border: solid 3px #AAB0FA
+  &-2
+    background-color: #DDD3C2
+  &-3
+    background-color: #BDD9FD
+  &-4
+    background-color: #FDFAE8
+  &-5
+    background-color: #fff
+  &-6
+    background-color: #fff
+    border: solid 40px #AAB0FA
+  &-7
+    background-color: #E8E8E8
+  &-8
+    background-color: #F2F8FF
+  &-9
+    background-color: #AAB0FA
+  &-10
+    background-color: #F6F6F6
+.bg-full-width
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: bottom
+  margin-inline: -3.3rem
+  @media screen and (max-width: $bp-max-sm)
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+.bg-fondo
+  &-1
+    background-image: url("../assets/curso/temas/tema1/29.svg") !important
+    background-position: top
+  &-2
+    background-image: url("../assets/curso/temas/tema1/30.svg") !important
+    background-position: top
+.bg-color-white
+  background-color: #fff
+  border-radius: 10px
+  
+
+//CLASES TITULOS//
+.titulo-con-imagen 
+  display: flex;
+  align-items: center;
+  position: relative;
+.titulo-con-imagen__fondo 
+  background-color: #EFD42F; 
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+.titulo-con-imagen__imagen 
+  position: absolute;
+  left: -30px; 
+  width: 50px; 
+.titulo-con-imagen__texto 
+  margin: 0;
+  padding-left: 20px; 
+
+//CALSES REEMPLAZO//
+.acordion__accion__btn--a
+  background-color: #FD8C25 
+.bg-color-2.tarjeta.acordion__activo
+  background-color: #F9EEAB !important 
+.tarjeta--boton
+  background-color: #BDD9FD
